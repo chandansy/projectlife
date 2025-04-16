@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Life</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #ff5f6d;
+      --secondary: #ffc371;
+      --bg-gradient: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      --accent-gradient: linear-gradient(135deg, #ff5f6d, #ffc371);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-gradient);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 80px 20px;
+    }
+
+    .logo {
+      max-width: 250px;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #dddddd;
+    }
+
+    .btn {
+      background: var(--accent-gradient);
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 10px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    .socials {
+      margin-top: 40px;
+    }
+
+    .socials a {
+      color: white;
+      font-size: 24px;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: var(--primary);
+    }
+
+    .launching-soon {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      color: var(--secondary);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-image"></div>
+
+  <div class="content">
+    <img src="logo.png" alt="Project Life - In Progress Logo" class="logo" />
+
+    <h1>Project Life</h1>
+    <p>A journey of growth, experiments, iterating & becoming better — together.</p>
+
+    <a href="https://youtube.com/yourchannel" class="btn" target="_blank">Follow on YouTube</a>
+    <a href="https://discord.gg/yourcommunity" class="btn" target="_blank">Join the Discord</a>
+
+    <div class="socials">
+      <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="launching-soon">Launching Soon 🚀</div>
+  </div>
+
+</body>
+</html>
