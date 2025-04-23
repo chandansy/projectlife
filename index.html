@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="/src/style.css" rel="stylesheet" />
+
+    <title>Vite App</title>
+  </head>
+  <body class="text-white bg-black">
+    <!-- navbar -->
+    <nav
+      class="backdrop-blur-2xl bg-transparent fixed left-0 right-0 top-0 z-[100]"
+    >
+      <div
+        class="container mx-auto flex items-center justify-between h-20 px-2 md:px-0"
+      >
+        <h1 class="text-2xl font-bold text-secondary-red">Project Life</h1>
+        <ul class="items-center gap-4 hidden lg:flex text-white">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#content">Content</a></li>
+          <li><a href="#experiments">Expreriments</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+
+        <img
+          src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/menu-2.svg"
+          class="h-7 w-7 block md:hidden invert"
+          id="menu-open"
+        />
+        <img
+          src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/x.svg"
+          class="h-7 w-7 hidden lg:hidden invert"
+          id="menu-close"
+        />
+      </div>
+    </nav>
+    <ul
+      class="items-center gap-4 hidden flex-col text-white fixed left-0 right-0 top-20 p-4 backdrop-blur-2xl bg-transparent z-[100]"
+      id="menu"
+    >
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#experiments">Expreriments</a></li>
+      <li><a href="#community">Community</a></li>
+    </ul>
+
+    <!-- hero -->
+    <section
+      id="home"
+      class="bg-no-repeat bg-cover md:bg-[url('https://c4.wallpaperflare.com/wallpaper/872/775/749/calm-dark-hill-nature-wallpaper-preview.jpg')]"
+    >
+      <div class="backdrop-blur-md">
+        <div
+          class="container mx-auto flex items-center justify-center min-h-screen md:h-screen px-2 md:px-0"
+        >
+          <div class="w-full md:w-1/2 flex flex-col items-center pt-20">
+            <h1
+              class="text-5xl md:text-7xl font-bold mb-12 bg-gradient-to-tl from-primary-red to-white bg-clip-text text-transparent py-4 text-center"
+            >
+              Project Life
+            </h1>
+            <h2 class="text-2xl md:text-4xl font-medium mb-5 text-center">
+              Life is a project.Progress is the goal
+            </h2>
+            <p class="text-white text-xl text-center mb-6 font-medium">
+              A lifelong journey of self-growth,experiments,learnings,and
+              transformations.<br />
+              Every person is a work in progress
+            </p>
+            <p class="text-xl text-white mb-10 font-medium text-center">
+              Launching Soon.Join the journey
+            </p>
+            <div
+              class="mb-10 flex flex-col md:flex-row items-center gap-6 md:mt-10"
+            >
+              <a
+                href=""
+                class="flex items-center justify-center gap-4 rounded-md bg-primary-red w-60 py-4 font-medium"
+              >
+                <img
+                  src="https://unpkg.com/@tabler/icons@3.31.0/icons/filled/brand-youtube.svg"
+                  class="h-7 w-7 invert"
+                />
+                <p>Follow on Youtube</p>
+              </a>
+
+              <a
+                href=""
+                class="flex items-center justify-center gap-4 rounded-md md:bg-primary-black bg-neutral-800 w-60 py-4 font-medium"
+              >
+                <img
+                  src="https://unpkg.com/@tabler/icons@3.31.0/icons/filled/brand-discord.svg"
+                  class="h-7 w-7 invert"
+                />
+                <p>Join Discord</p>
+              </a>
+            </div>
+            <!-- <div class="flex items-center gap-4">
+              <a href="">
+                <img
+                  src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/brand-instagram.svg"
+                  class="h-8 w-8 invert"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/brand-twitter.svg"
+                  class="h-8 w-8 invert"
+              /></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--about -->
+    <section id="about">
+      <div
+        class="container mx-auto min-h-screen md:h-screen flex items-center justify-center px-2 md:px-0"
+      >
+        <div class="py-8 space-y-20 w-full">
+          <h2 class="text-4xl font-bold text-center">About</h2>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-20"
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
+            <image
+              data-aos="fade-up"
+              data-aos-once="true"
+              class="h-full rounded-md background-contain"
+              src="https://images.unsplash.com/photo-1445053023192-8d45cb66099d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cGVyc29uJTI1MjBqb3VybmFsaW5nJTI1MjBwZXJzb25hbCUyNTIwZ3Jvd3RoJTI1MjBnb2FscyUyNTIwd2l0aCUyNTIwYnVkZGluZyUyNTIwcGxhbnQlMjUyMG1pbmltYWxpc3QlMjUyMHdvcmtzcGFjZSUyNTIwd2FybSUyNTIwbGlnaHRpbmd8ZW58MHwwfHx8MTc0NDkwMTAxNHww&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+            />
+            <div class="space-y-8">
+              <h3 class="text-2xl font-bold text-secondary-red text-center">
+                Project Life
+              </h3>
+              <p class="text-xl text-center md:text-left">
+                Project Life is not just a brand — it's a lifelong journey of
+                self-growth, experiments, learnings, and transformations. The
+                core belief behind it is that life itself is a project, and
+                every person is a work-in-progress.
+                <br />
+                <br />
+                Through real-life challenges, personal failures, and continuous
+                self-improvement efforts, I aim to research, implement,
+                document, and share the impact of what works — and what doesn't.
+              </p>
+              <div class="space-y-8">
+                <h3 class="text-2xl font-bold text-center md:text-left">
+                  Content Themes
+                </h3>
+                <ul
+                  class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xl list-inside justify-items-center md:justify-items-start"
+                >
+                  <li>
+                    <i class="ti ti-star-filled mr-2 text-red-400"></i
+                    >Productivity
+                  </li>
+                  <li>
+                    <i class="ti ti-star-filled mr-2 text-red-400"></i>Health &
+                    Fitness
+                  </li>
+                  <li>
+                    <i class="ti ti-star-filled mr-2 text-red-400"></i>Finance
+                  </li>
+                  <li>
+                    <i class="ti ti-star-filled mr-2 text-red-400"></i
+                    >Spirituality
+                  </li>
+                  <li>
+                    <i class="ti ti-star-filled mr-2 text-red-400"></i>Career &
+                    Purpose
+                  </li>
+                </ul>
+              </div>
+              <p
+                class="text-xl md:border-l-6 border-secondary-red p-4 text-center md:text-left"
+              >
+                "Experiments > Expectations. In Progress. Always."
+              </p>
+            </div>
+          </div>
+          <p class="text-4xl font-bold text-center">
+            Life is a project. Progress is the goal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- content-->
+    <section id="content">
+      <div
+        class="container mx-auto min-h-screen md:h-screen flex items-center justify-center px-2 md:px-0"
+      >
+        <div class="py-8 space-y-20 w-full">
+          <h2 class="text-4xl font-medium text-center">Content</h2>
+          <div class="space-y-4 flex flex-col items-center">
+            <h3 class="text-2xl font-bold text-secondary-red -mt-10">
+              Project Life - In Progress
+            </h3>
+            <p class="text-lg text-center md:text-left">
+              Our YouTube channel featuring real-life experiments and personal
+              growth journeys.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-20 text-white"
+            data-aos="fade-up"
+            data-aos-once="true"
+          >
+            <div class="rounded-md overflow-hidden space-y-4 bg-neutral-800">
+              <image
+                src="https://images.unsplash.com/photo-1589396125280-bbd956df2db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8YnVkZGluZyUyNTIwcGxhbnQlMjUyMHNwcm91dGluZyUyNTIwZnJvbSUyNTIwc29pbCUyNTIwbWluaW1hbGlzdCUyNTIwcGhvdG9ncmFwaHklMjUyMHNvZnQlMjUyMGxpZ2h0aW5nJTI1MjBncm93dGglMjUyMHN5bWJvbGlzbSUyNTIwaW5zcGlyYXRpb25hbCUyNTIwam91cm5leSUyNTIwY2xlYW4lMjUyMGJhY2tncm91bmR8ZW58MHwwfHx8MTc0NDkwMTA0NHww&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+              />
+              <div class="p-4 space-y-4">
+                <h2 class="text-2xl font-bold">The Experiment Log</h2>
+                <p class="">
+                  Follow along as I take concepts like waking up at 5AM, deep
+                  work routines, or no-sugar diets and document the results over
+                  days and weeks.
+                </p>
+                <p class="flex items-center gap-2">
+                  <img
+                    src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/clock.svg"
+                    class="h-6 w-6 invert"
+                  />Coming Soon
+                </p>
+              </div>
+            </div>
+            <div class="rounded-md overflow-hidden space-y-4 bg-neutral-800">
+              <image
+                src="https://images.unsplash.com/photo-1567026392304-9516ebec5ec0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8YnVkZGluZyUyNTIwcGxhbnQlMjUyMHNwcm91dGluZyUyNTIwZnJvbSUyNTIwc29pbCUyNTIwbWluaW1hbGlzdCUyNTIwcGhvdG9ncmFwaHklMjUyMHNvZnQlMjUyMGxpZ2h0aW5nJTI1MjBncm93dGglMjUyMHN5bWJvbGlzbSUyNTIwaW5zcGlyYXRpb25hbCUyNTIwam91cm5leSUyNTIwY2xlYW4lMjUyMGJhY2tncm91bmR8ZW58MHwwfHx8MTc0NDkwMTA0NHww&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+              />
+              <div class="p-4 space-y-4">
+                <h2 class="text-2xl font-bold">The Bounce Back Podcast</h2>
+                <p class="">
+                  Conversations with guests about their failures, valuable
+                  learnings, and how they bounced back stronger than before.
+                </p>
+                <p class="flex items-center gap-2">
+                  <img
+                    src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/clock.svg"
+                    class="h-6 w-6 invert"
+                  />Coming Soon
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- content themes -->
+    <section>
+      <div class="container mx-auto my-48 space-y-16 px-2 md:px-0">
+        <div class="space-y-4 flex flex-col items-center">
+          <h3 class="text-2xl font-bold text-secondary-red -mt-10">
+            Content Themes
+          </h3>
+          <p class="text-lg text-center md:text-left">
+            Exploring multiple areas of life through practical experimentation.
+          </p>
+        </div>
+        <ul
+          data-aos="fade-up"
+          data-aos-once="true"
+          class="flex flex-col md:flex-row md:items-center justify-center text-lg gap-6 text-white"
+        >
+          <li
+            class="flex flex-col items-center gap-4 bg-neutral-800 p-6 rounded-md flex-1"
+          >
+            <div class="rounded-full p-4 bg-red-400">
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/circle-check.svg"
+                class="size-8 md:size-10 invert"
+              />
+            </div>
+            <p class="font-bold">Productivity</p>
+          </li>
+          <li
+            class="flex flex-col items-center gap-4 bg-neutral-800 p-6 rounded-md flex-1"
+          >
+            <div class="rounded-full p-4 bg-red-400">
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/heart.svg"
+                class="size-8 md:size-10 invert"
+              />
+            </div>
+            <p class="font-bold">Health & Fitness</p>
+          </li>
+          <li
+            class="flex flex-col items-center gap-4 bg-neutral-800 p-6 rounded-md flex-1"
+          >
+            <div class="rounded-full p-4 bg-red-400">
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/coin.svg"
+                class="size-8 md:size-10 invert"
+              />
+            </div>
+            <p class="font-bold">Finance</p>
+          </li>
+          <li
+            class="flex flex-col items-center gap-4 bg-neutral-800 p-6 rounded-md flex-1"
+          >
+            <div class="rounded-full p-4 bg-red-400">
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/photo.svg"
+                class="size-8 md:size-10 invert"
+              />
+            </div>
+            <p class="font-bold">Spirituality</p>
+          </li>
+          <li
+            class="flex flex-col items-center gap-4 bg-neutral-800 p-6 rounded-md flex-1"
+          >
+            <div class="rounded-full p-4 bg-red-400">
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/briefcase.svg"
+                class="size-8 md:size-10 invert"
+              />
+            </div>
+            <p class="font-bold">Career & Purpose</p>
+          </li>
+        </ul>
+        <a
+          data-aos="fade-up"
+          data-aos-once="true"
+          href=""
+          class="flex items-center justify-center gap-4 rounded-md bg-primary-red w-fit py-4 px-6 font-medium mx-auto"
+        >
+          <img
+            src="https://unpkg.com/@tabler/icons@3.31.0/icons/filled/brand-youtube.svg"
+            class="h-7 w-7 invert"
+          />
+          <p>Subscribe to Youtube Channel</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- featured experiments-->
+    <section id="experiments">
+      <div
+        class="container mx-auto flex items-center justify-center px-2 md:px-0"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 rounded-md overflow-hidden"
+          data-aos="fade-up"
+          data-aos-once="true"
+        >
+          <div class="space-y-8 bg-neutral-800 p-8 text-center md:text-left">
+            <p class="text-2xl font-medium uppercase">Featured Experiment</p>
+            <h2 class="font-bold text-4xl">5AM Morning Routine</h2>
+
+            <div class="text-lg space-y-4">
+              <p>Duration : 14 Days</p>
+              <p>Documentation : Daily Journal + Weekly Video</p>
+              <p>Status : Coming Soon</p>
+            </div>
+
+            <p class="text-lg">
+              What happens when you wake up at 5AM every day for two weeks? This
+              experiment explores the impact on productivity, mood, energy
+              levels, and overall well-being.
+            </p>
+            <a
+              href=""
+              class="text-lg flex items-center justify-center md:justify-start gap-2"
+            >
+              <span>Get notified when it launches</span>
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/chevron-right.svg "
+                class="h-6 w-6"
+              />
+            </a>
+          </div>
+          <img
+            class="hidden md:block"
+            src="https://images.unsplash.com/photo-1445053023192-8d45cb66099d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cGVyc29uJTI1MjBjb25kdWN0aW5nJTI1MjBzZWxmLWltcHJvdmVtZW50JTI1MjBleHBlcmltZW50JTI1MjBqb3VybmFsJTI1MjBub3RlYm9vayUyNTIwdHJhY2tpbmclMjUyMHByb2dyZXNzJTI1MjBtaW5pbWFsaXN0JTI1MjBhZXN0aGV0aWMlMjUyMGluc3BpcmF0aW9uYWwlMjUyMGdyb3d0aC1mb2N1c2VkJTI1MjBsaWZlc3R5bGUlMjUyMHBob3RvZ3JhcGh5fGVufDB8MHx8fDE3NDQ5MDExMDV8MA&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--upcoming experiments -->
+    <section>
+      <div
+        class="container mx-auto flex flex-col items-center space-y-20 my-20 md:my-48 px-2 md:px-0"
+      >
+        <h3 class="text-2xl font-bold">Upcoming Experiments</h3>
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          class="flex flex-col md:flex-row items-center justify-center gap-4"
+        >
+          <div
+            class="flex items-center md:items-start flex-col gap-4 rounded-md bg-neutral-800 p-6"
+          >
+            <div class="rounded-full p-4 bg-red-400 w-fit">
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/cube.svg "
+                class="h-6 w-6 invert"
+              />
+            </div>
+            <h3 class="text-2xl font-medium">No-Sugar Diet</h3>
+            <p class="text-center md:text-left">
+              Exploring the effects of cutting out added sugar for 30 days on
+              energy, focus, and physical well-being.
+            </p>
+            <p>Duration: 30 Days</p>
+          </div>
+          <div
+            class="flex items-center md:items-start flex-col gap-4 rounded-md bg-neutral-800 p-6"
+          >
+            <div class="rounded-full p-4 bg-red-400 w-fit">
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/clock.svg "
+                class="h-6 w-6 invert"
+              />
+            </div>
+            <h3 class="text-2xl font-medium">Deep Work Routine</h3>
+            <p class="text-center md:text-left">
+              Testing the effectiveness of dedicated deep work sessions on
+              creative output and productivity.
+            </p>
+            <p>Duration: 21 Days</p>
+          </div>
+          <div
+            class="flex items-center md:items-start flex-col gap-4 rounded-md bg-neutral-800 p-6"
+          >
+            <div class="rounded-full p-4 bg-red-400 w-fit">
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/pencil.svg "
+                class="h-6 w-6 invert"
+              />
+            </div>
+            <h3 class="text-2xl font-medium">Daily Journaling</h3>
+            <p class="text-center md:text-left">
+              Documenting the mental clarity and emotional benefits of
+              consistent journaling practice.
+            </p>
+            <p>Duration: 45 Days</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- community -->
+    <section id="community">
+      <div
+        class="container mx-auto min-h-screen md:h-screen flex items-center justify-center px-2 md:px-0"
+      >
+        <div class="py-8 space-y-20">
+          <h2 class="text-4xl font-bold text-center">Community</h2>
+          <div class="space-y-4 flex flex-col items-center">
+            <h3 class="text-2xl font-bold text-secondary-red -mt-10">
+              Join The Journey Together
+            </h3>
+            <p class="text-lg md:text-2xl text-center">
+              We're building a supportive community where everyone can share
+              challenges, <br />
+              find accountability partners, and access valuable resources.
+            </p>
+            <div
+              data-aos="fade-up"
+              data-aos-once="true"
+              class="grid grid-cols-1 md:grid-cols-2 mt-16 gap-8 items-stretch"
+            >
+              <img
+                class="rounded-md"
+                src="https://images.unsplash.com/photo-1517840933437-c41356892b35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8ZGl2ZXJzZSUyNTIwZ3JvdXAlMjUyMGNvbGxhYm9yYXRpdmUlMjUyMHdvcmtzaG9wJTI1MjBwZXJzb25hbCUyNTIwZ3Jvd3RoJTI1MjBqb3VybmV5JTI1MjBzdXBwb3J0aXZlJTI1MjBjb21tdW5pdHklMjUyMGF0bW9zcGhlcmUlMjUyMHdhcm0lMjUyMGxpZ2h0aW5nfGVufDB8MHx8fDE3NDQ5MDEyMzl8MA&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+                alt=""
+              />
+              <div
+                class="space-y-6 flex flex-col justify-center gap-10 bg-neutral-800 p-8 rounded-md"
+              >
+                <h2 class="text-2xl font-bold text-center md:text-left">
+                  Our Community Vision
+                </h2>
+                <div class="space-y-10">
+                  <!-- row-1 -->
+                  <div
+                    class="flex flex-col md:flex-row items-center gap-4 md:gap-8"
+                  >
+                    <div class="h-8 w-8">
+                      <i
+                        class="ti ti-users !text-2xl !shrink-0 p-2 bg-red-400 !rounded-full"
+                      ></i>
+                    </div>
+
+                    <div
+                      class="flex flex-col items-center md:items-start space-y-2"
+                    >
+                      <h3 class="text-xl">Share Challenges</h3>
+                      <p class="text-lg md:pr-56 text-center md:text-left">
+                        A safe space to share your struggles and learn from
+                        others who've been there.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- row-2 -->
+                  <div
+                    class="flex flex-col md:flex-row items-center gap-4 md:gap-8"
+                  >
+                    <div class="h-8 w-8">
+                      <i
+                        class="ti ti-users-group !text-2xl !shrink-0 p-2 bg-red-400 !rounded-full"
+                      ></i>
+                    </div>
+                    <div
+                      class="flex flex-col items-center md:items-start space-y-2"
+                    >
+                      <h3 class="text-xl">Find Accountability Partners</h3>
+                      <p class="text-lg md:pr-56 text-center md:text-left">
+                        Connect with others who'll help you stay committed to
+                        your goals.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- row-3 -->
+                  <div
+                    class="flex flex-col md:flex-row items-center gap-4 md:gap-8"
+                  >
+                    <div class="h-8 w-8">
+                      <i
+                        class="ti ti-stars !text-2xl !shrink-0 p-2 bg-red-400 !rounded-full"
+                      ></i>
+                    </div>
+                    <div
+                      class="flex flex-col items-center md:items-start space-y-2"
+                    >
+                      <h3 class="text-xl">Access Resources</h3>
+                      <p class="text-lg md:pr-56 text-center md:text-left">
+                        From templates to journals, find tools to help you
+                        succeed in your journey.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              href=""
+              class="flex items-center justify-center gap-4 rounded-md bg-primary-red w-60 py-4 font-medium mt-10"
+            >
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/filled/brand-discord.svg"
+                class="h-7 w-7 invert"
+              />
+              <p>Join Discord</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- join the project life journey -->
+    <section>
+      <div class="container mx-auto my-20 md:my-40 px-2 md:px-0">
+        <div class="space-y-12 flex flex-col items-center">
+          <h3
+            class="text-4xl font-bold text-secondary-red md:-mt-10 text-center"
+          >
+            Join The Project Life Journey
+          </h3>
+          <p class="text-lg md:text-xl text-center">
+            Launching soon with experiments, insights, and a supportive
+            community committed to personal growth.
+          </p>
+          <p class="text-lg md:text-xl p-4 rounded-full bg-red-400">
+            Launching Soon. Join the Journey
+          </p>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          class="flex flex-col md:flex-row items-center justify-center py-32 gap-8"
+        >
+          <img
+            class="rounded-md !max-h-[400px]"
+            src="https://images.unsplash.com/photo-1445053023192-8d45cb66099d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8cGVyc29uJTI1MjBwbGFudGluZyUyNTIwc2VlZGxpbmclMjUyMGdyb3d0aCUyNTIwam91cm5leSUyNTIwaW5zcGlyYXRpb25hbCUyNTIwc3VucmlzZSUyNTIwcHJvZmVzc2lvbmFsJTI1MjBwaG90b2dyYXBoeSUyNTIwbW90aXZhdGlvbmFsJTI1MjB3YXJtJTI1MjB0b25lc3xlbnwwfDB8fHwxNzQ0OTAxMzA5fDA&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+            alt=""
+          />
+          <div
+            class="space-y-8 p-6 md:p-10 rounded-md bg-neutral-800 md:w-[40%]"
+          >
+            <h2 class="text-2xl font-bold text-center md:text-left">
+              Connect With Us
+            </h2>
+            <div class="space-y-4">
+              <a
+                href=""
+                class="flex items-center gap-6 border border-gray-300 rounded-md p-4"
+              >
+                <div class="p-2 bg-red-400 rounded-full w-fit">
+                  <img
+                    src="https://unpkg.com/@tabler/icons@3.31.0/icons/filled/brand-youtube.svg"
+                    class="h-7 w-7 invert"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-xl md:text-2xl">Follow on Youtube</h3>
+                  <p class="text-md md:text-lg">
+                    Watch experiments and insights
+                  </p>
+                </div>
+                <img
+                  src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/chevron-right.svg "
+                  class="h-6 w-6 invert ml-auto"
+                />
+              </a>
+              <a
+                href=""
+                class="flex items-center gap-6 border border-gray-300 rounded-md p-4"
+              >
+                <div class="p-2 bg-red-400 rounded-full w-fit">
+                  <img
+                    src="https://unpkg.com/@tabler/icons@3.31.0/icons/filled/brand-discord.svg"
+                    class="h-7 w-7 invert"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-xl md:text-2xl">Join Discord</h3>
+                  <p class="text-md md:text-lg">
+                    Connect with like-minded people
+                  </p>
+                </div>
+                <img
+                  src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/chevron-right.svg "
+                  class="h-6 w-6 invert ml-auto"
+                />
+              </a>
+            </div>
+            <div class="flex flex-col items-center md:items-start gap-4">
+              <p class="text-lg">Follow us on social media</p>
+              <div class="flex items-center gap-4">
+                <div class="p-2 bg-red-400 rounded-full w-fit">
+                  <img
+                    src="https://unpkg.com/@tabler/icons@3.31.0/icons/filled/brand-instagram.svg"
+                    class="h-7 w-7 invert"
+                  />
+                </div>
+                <div class="p-2 bg-red-400 rounded-full w-fit">
+                  <img
+                    src="https://unpkg.com/@tabler/icons@3.31.0/icons/filled/brand-twitter.svg"
+                    class="h-7 w-7 invert"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section>
+      <div class="container mx-auto space-y-10 mb-40 w-fit px-2 md:px-0">
+        <p class="text-2xl text-center">"In Progress.Always."</p>
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          class="rounded-md p-10 text-lg flex flex-col items-center gap-6 bg-neutral-800"
+        >
+          <h3 class="font-bold text-xl">Stay Updated</h3>
+          <p class="text-center">
+            Join our newsletter to get notified when the community
+            <br class="hidden md:block" />
+            features launch.
+          </p>
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <input
+              type="text"
+              placeholder="Enter your Email"
+              class="py-4 px-6 rounded-md border border-gray-300 w-full md:w-96"
+            />
+            <button
+              class="rounded-md bg-primary-red py-4 px-6 font-medium text-white cursor-pointer w-full md:w-auto"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container mx-auto py-10 space-y-20">
+        <div class="flex flex-col items-center gap-8">
+          <div
+            class="h-2 w-64 bg-gradient-to-r from-primary-red to-secondary-red"
+          ></div>
+          <h3 class="text-2xl font-bold">Project Life</h3>
+          <p class="text-lg">Life is a project.Progress is the goal</p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-36">
+          <!-- navigation -->
+          <div class="flex flex-col items-center md:items-start gap-4">
+            <h3 class="text-2xl font-bold">Navigation</h3>
+            <ul class="text-lg flex flex-col items-center md:items-start gap-2">
+              <li>Home</li>
+              <li>About</li>
+              <li>Content</li>
+              <li>Experiments</li>
+              <li>Community</li>
+            </ul>
+          </div>
+
+          <!--contact-->
+          <div class="flex flex-col items-center gap-4">
+            <h3 class="text-2xl font-bold">Contact</h3>
+            <a href="">hello@projectlife.in</a>
+            <p class="text-center">
+              Pushing boundaries. Sharing journeys. In Progress. Always.
+            </p>
+          </div>
+          <!-- connect -->
+          <div class="flex flex-col items-center gap-4">
+            <h3 class="text-2xl font-bold">Connect</h3>
+            <div class="flex items-center gap-4">
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/brand-youtube.svg "
+                class="size-6 invert"
+              />
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/brand-discord.svg "
+                class="size-6 invert"
+              />
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/brand-instagram.svg "
+                class="size-6 invert"
+              />
+              <img
+                src="https://unpkg.com/@tabler/icons@3.31.0/icons/outline/brand-twitter.svg "
+                class="size-6 invert"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
